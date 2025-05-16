@@ -11,5 +11,9 @@ const likeModel = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+   profilephoto: {
+    type: String, // This stores the profile photo URL
+    required: true
+  }
 },{timestamps:true});
 export const Like = mongoose.model("Like",likeModel)

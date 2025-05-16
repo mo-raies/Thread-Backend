@@ -5,9 +5,9 @@ import cors from "cors"
 import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
 import userRoute from "./routes/userRoute.js"
-import threadRoute from "./routes/threadRoute.js"
-
-
+import threadRoute from "./routes/threadRoute.js" 
+import likeRoute from "./routes/likeRoute.js"
+import bookmarkRoute from "./routes/bookmarkRoute.js"
 
 dotenv.config();
 
@@ -32,6 +32,8 @@ res.status(200).json({
 //route
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/thread",threadRoute)
+app.use("/api/v1/like",likeRoute)
+app.use("/api/v1/bookmark",bookmarkRoute)
 
 
 //start the server
